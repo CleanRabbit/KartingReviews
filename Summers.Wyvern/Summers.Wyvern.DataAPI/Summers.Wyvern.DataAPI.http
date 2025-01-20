@@ -1,0 +1,6 @@
+@Summers.Wyvern.DataAPI_HostAddress = http://localhost:5150
+
+GET {{Summers.Wyvern.DataAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

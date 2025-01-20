@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>Summers.Wyvern.Server.MongoDb</AssemblyName>
+    <RootNamespace>Summers.Wyvern.Server.MongoDb</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Summers.Wyvern.Common\Summers.Wyvern.Common.csproj" />
+  </ItemGroup>
+
+</Project>

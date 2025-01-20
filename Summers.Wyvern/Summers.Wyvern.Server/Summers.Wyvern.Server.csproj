@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Summers.Wyvern.Common\Summers.Wyvern.Common.csproj" />
+    <ProjectReference Include="..\Summers.Wyvern.Server.MongoDb\Summers.Wyvern.Server.MongoDb.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="NAudio">
+      <HintPath>..\Libraries\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="Recognito">
+      <HintPath>..\Libraries\Recognito.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
