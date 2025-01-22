@@ -35,7 +35,7 @@ namespace Summers.Wyvern.DataAPI
 
 			app.UseAuthorization();
 
-			app.Services.GetService<IDataAccessController>().Connect(app.Configuration);
+			app.Services.GetService<IDataAccessController>()?.Connect(app.Configuration);
 
 			app.MapControllers();
 

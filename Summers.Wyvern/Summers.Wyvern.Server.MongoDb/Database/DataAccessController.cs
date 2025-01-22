@@ -110,11 +110,11 @@ namespace Summers.Wyvern.Server.MongoDb.Database
 		protected void InitializeRepositories()
 		{
 			Users = new UserAccounts(this);
-			Intents = new Intents(this);
+			VenueReviews = new VenueReviews(this);
 		}
 
 		public UserAccounts Users { get; private set; }
-        public Intents Intents { get; private set; }
+        public VenueReviews VenueReviews { get; private set; }
 
 		/// <summary>
 		/// Gets the data context.

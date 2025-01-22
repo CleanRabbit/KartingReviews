@@ -89,7 +89,9 @@ namespace Summers.Wyvern.Server.MongoDb.Database
 		/// <returns></returns>
 		public async Task CreateIndex<T>(string collectionName, string fieldName, bool ascending) where T : EntityBase
 		{
-			await Task.Run(() => true);
+			//TODO: INDEX THIS STUFF!
+			await Task.FromResult(true);
+
 			//await _dataBase.GetCollection<T>(collectionName)
 			//	.Indexes
 			//	.CreateOneAsync(ascending?

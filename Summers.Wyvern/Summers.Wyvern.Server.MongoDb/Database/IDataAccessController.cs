@@ -2,6 +2,7 @@
 
 using Microsoft.Extensions.Configuration;
 
+using Summers.Wyvern.Server.MongoDb.Entities;
 using Summers.Wyvern.Server.MongoDb.Repositories;
 
 namespace Summers.Wyvern.Server.MongoDb.Database
@@ -35,7 +36,7 @@ namespace Summers.Wyvern.Server.MongoDb.Database
 		IEnumerable<string> GetDatabaseListOnHost(string hostName, int portNumber);
 
 		UserAccounts Users { get; }
-        Intents Intents { get; }
+		VenueReviews VenueReviews { get; }
 
 		/// <summary>
 		/// Gets the data context which is mapped to the database.
