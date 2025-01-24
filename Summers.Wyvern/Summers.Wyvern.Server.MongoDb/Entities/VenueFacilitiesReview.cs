@@ -7,9 +7,6 @@ namespace Summers.Wyvern.Server.MongoDb.Entities
 		public Guid VenueId { get; set; }
 		public UserEntity Author { get; set; }
 
-		public string ReviewTitle { get; set; }
-		public string DetailedReview { get; set; }
-
 		public string CleanlinessReview { get; set; }
 		public int CleanlinessScore { get; set; }
 

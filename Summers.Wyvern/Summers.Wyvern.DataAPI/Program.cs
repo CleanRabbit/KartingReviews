@@ -1,7 +1,6 @@
 
 using Summers.Wyvern.Server.MongoDb;
 using Summers.Wyvern.Server.MongoDb.Database;
-using Summers.Wyvern.SpeechManager;
 
 namespace Summers.Wyvern.DataAPI
 {

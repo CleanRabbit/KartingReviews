@@ -6,26 +6,28 @@ namespace Summers.Wyvern.DataAPI.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
-	public class HomePageController : ControllerBase
+	public class VenueReviewsListController : ControllerBase
 	{
 		private readonly IDataAccessController _dac;
 		private readonly ILogger<HomePageController> _logger;
 
-		public HomePageController(ILogger<HomePageController> logger, IDataAccessController dac)
+		public VenueReviewsListController(ILogger<HomePageController> logger, IDataAccessController dac)
 		{
 			_dac = dac;
 			_logger = logger;
 		}
 
-		[HttpGet(Name = "GetLetestPills")]
-		public async Task<IEnumerable<ReviewPill>> Get()
+		[HttpGet(Name = "Get")]
+		public async Task<IEnumerable<ReviewPill>> Get(string OrderBy, int max, int index)
 		{
 			//TODO: Define the BSON Search parameter
 			var bsonSearch = "";
 			//TODO: Define the BSON Sort parameter (order by LastUpdateDate desc)
 			var bsonOrder = "";
 
-			return await Map.ToPill(_dac.VenueReviews.Read(bsonSearch, bsonOrder).Take(3));
+			var skipCount = index * max;
+
+			return await Map.ToPill(_dac.VenueReviews.Read(bsonSearch, bsonOrder).Skip(skipCount).Take(max));
 		}
 
 		[HttpPost(Name = "PostSearchRequest")]
